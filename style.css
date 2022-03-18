@@ -101,5 +101,8 @@ h1 {
     -ms-flex-align: center;
     align-items: center;
 }
-
+.logo img {
+    width: 6rem;
+    height: auto
+}
 /* Content */
