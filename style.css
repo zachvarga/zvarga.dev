@@ -120,7 +120,6 @@ h1 {
     min-height: 100vh;
     padding: 9rem 3rem;
     position: relative;
-    opacity: 0;
     -webkit-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
     transition: opacity 0.4s;
