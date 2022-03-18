@@ -28,6 +28,14 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+a {
+    color: #fd2155;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
 /* Typography */
 h1 {
     font-size: 3rem;
@@ -78,4 +86,20 @@ h1 {
     justify-content: center;
     padding: 2rem 0;
 }
+.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 /* Content */
