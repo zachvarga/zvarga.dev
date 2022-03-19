@@ -105,6 +105,24 @@ h1 {
     width: 6rem;
     height: auto
 }
+.menu-items {
+    font-size: 1.5rem;
+    padding: 0;
+}
+nav a::after {
+	content: '';
+	display: block;
+	height: 2px;
+	background-color: #b5beb9;
+	width: 0%;
+	position: absolute;
+	bottom: 12;
+	padding-top: 3px;
+	transition: all ease-in-out 300ms;
+}
+nav a:hover::after {
+	width: 100%;
+}
 /* Content */
 #section-home {
     height: 100vh;
