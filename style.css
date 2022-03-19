@@ -105,15 +105,22 @@ h1 {
     width: 6rem;
     height: auto
 }
-.menu-items {
+.nav-items {
     font-size: 1.5rem;
     padding: 0;
+}
+.nav-items a {
+	letter-spacing: 3px;
+	color: #515152;
+	position: relative;
+	display: inline-block;
+	z-index: 100;
 }
 nav a::after {
 	content: '';
 	display: block;
 	height: 2px;
-	background-color: #b5beb9;
+	background-color: #ed3f36;
 	width: 0%;
 	position: absolute;
 	bottom: 12;
