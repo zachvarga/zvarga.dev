@@ -1,0 +1,162 @@
+    /* mod menu positioning */
+    .mod-nav {
+        position: absolute;
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        background: #FFF; 
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: all .125s;
+    }
+    
+    .mod-nav.is-open {
+        opacity: 1;
+        z-index: 100;
+        visibility: visible;
+        height: 50vh;
+    }
+    
+    /* Colored band effect */
+    .mod-nav::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #e4563d;
+        transform-origin: 0 0;
+        transform: translateY(120%);
+        transition: all .275s .1s;
+    }
+    
+    .mod-nav.is-open::before {
+        transform: translateY(0);
+    }
+    
+    /* Skewing effect on menu links */
+    .mod-nav ul {
+        display: inline-flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 3em;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .mod-nav li {
+        display: block;
+        margin: .5rem 0;
+        text-align: right;
+    }
+    
+    /* Apparition effect on links */
+    .mod-nav a {
+        opacity: 0;
+    }
+    
+    .mod-nav.is-open a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .mod-nav li:nth-child(1) a {
+        transition: all 275ms 175ms
+    }
+    .mod-nav li:nth-child(2) a {
+        transition: all 275ms 225ms
+    }
+    .mod-nav li:nth-child(3) a {
+        transition: all 275ms 275ms
+    }
+    
+    
+    /* Decoration */
+    .mod-nav ul,
+    .mod-nav li {
+        list-style: none;
+        padding: 0;
+    }
+    .mod-nav ul {
+      vertical-align: middle;
+      position: relative;
+    }
+    .mod-nav a {
+        display: block;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 5vw;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .open-mod-nav {
+        position: absolute;
+        top: 15px;
+        padding-top: 20px;
+        right: 15px;
+        z-index: 100000;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+    .open-mod-nav:focus {
+        outline: none;
+    }
+    .burger {
+        position: relative;
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 0 auto;
+        background: #333333;
+        transition: all .275s;
+    }
+    
+    .burger:after,
+    .burger:before {
+        content: '';
+        display: block;
+        height: 100%;
+        background: #333333;
+        transition: all .275s;
+    }
+    
+    .burger:after {
+        transform: translateY(-12px); 
+    }
+     
+    .burger:before {
+        transform: translateY(-12px); 
+    }
+    
+    /* Toggle State part */
+    .is-open .burger {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .is-open .burger:before {
+        transform: translateY(0px) skew(-10deg) rotate(75deg);
+    }
+    
+    .is-open .burger:after {
+        transform: translateY(-12px) translateX(10px) skew(-20deg);
+        opacity: 0;
+    }
+    
+    /* MENU Text part */
+    
+    .burger-text {
+        display: block;
+        font-size: .675rem;
+        letter-spacing: .05em;
+        margin-top: .5em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        color: #333333;
+    }
+    

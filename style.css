@@ -9,6 +9,9 @@ html {
 article,aside,footer,header,nav,section {
     display:block;
 }
+li {
+    list-style: none;
+}
 section {
     height: 100vh;
     overflow: hidden;
@@ -26,11 +29,11 @@ body * {
 body {
     font-size: 1.6rem;
     line-height: 1.5;
-    background: #1d1d1d;
+    background: white;
     display: block;
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    color: #1d1d1d;
     padding-left: 13rem;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -50,22 +53,22 @@ h1 {
 
 /* Menu */
 .main-menu {
-    width: 13rem;
-    background-color: white;
-    height: 100vh;
+    width: 100%;
+    background-color: rgba(181,190,185,.25);
+    height: 5rem;
     position: fixed;
     left: 0;
-    top: 0;
-    right: auto;
+    top: auto;
+    right: 0;
     bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: inline-flex;
     z-index: 3;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -73,11 +76,12 @@ h1 {
     -ms-flex-align: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 1rem;
 }
 .main-menu-top {
-    background: white;
-    width: 100%;
+    background: transparent;
+    width: auto;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -90,8 +94,8 @@ h1 {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    padding: 2rem 0;
+    justify-content: start;
+    padding: 0;
 }
 .logo {
     display: -webkit-box;
@@ -108,13 +112,33 @@ h1 {
     -ms-flex-align: center;
     align-items: center;
 }
+.main-manu-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+}
+.main-manu-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+}
+
 .logo img {
-    width: 6rem;
+    width: 3rem;
     height: auto
 }
 .nav-items {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0;
+    display: inline-block;
 }
 .nav-items a {
 	letter-spacing: 3px;
@@ -154,4 +178,104 @@ nav a:hover::after {
 }
 .typed-cursor, .typed-cursor--blink {
     opacity: .25 !important;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 8vw !important;
+    }
+    body {
+        padding: 0 !important;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .full-nav {
+        display: none;
+    }
+    body {
+        padding: 1em;
+    }
+    .section-full {
+        padding: 1em;
+        align-items: start;
+    }
+    h1 {
+       font-size: 2.5rem; 
+    }
+}
+@media only screen and (min-width: 992px) {
+    .mod-nav, .open-mod-nav {
+        display: none;
+    }
+    .main-menu {
+        width: 13rem;
+        background-color: rgba(181,190,185,.25); 
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: auto;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        z-index: 3;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    } 
+    .main-menu-top {
+        background: transparent;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    .logo img {
+        width: 6rem;
+        height: auto
+    }
+    .nav-items a {
+        letter-spacing: 3px;
+        color: #515152;
+        position: relative;
+        display: inline-block;
+        z-index: 100;
+    }
+    nav a::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: #ed3f36;
+        width: 0%;
+        position: absolute;
+        bottom: 12;
+        padding-top: 3px;
+        transition: all ease-in-out 300ms;
+    }
+    nav a:hover::after {
+        width: 100%;
+    }
 }

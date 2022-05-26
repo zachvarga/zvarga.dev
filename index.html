@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Zach Varga, Front End Engineer</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+        <link rel="stylesheet" href="mobile-nav.css">
         <style>
             @font-face {
                 font-family: 'Roboto', sans-serif;
@@ -19,20 +17,28 @@
         </style>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
         <menu class="main-menu">
             <div class="main-menu-top">
                 <a class="logo" href="/"><img class="logo" src="/assets/zvd-logo.png" alt="zvd-logo"></a>
             </div>
-            <nav class="main-menu-nav">
-                <ul class="nav-items">
+            <button id="burger" class="open-mod-nav">
+                <span class="burger"></span>
+                <span class="burger-text">Menu</span>
+            </button>
+            <nav class="mod-nav" id="mod-nav">
+                <ul class="hidden nav-items">
                     <li><a href="#work">work</a></li>
                     <li><a href="#about">about me</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
+            <nav class="full-nav" id="full_nav">
+                <ul class="hidden nav-items">
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#about">about me</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>  
         </menu>
         <section id="home" class="section-full">
             <div class="hero">
@@ -64,11 +70,13 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
             var typed = new Typed(".hero-typed", {
-                strings: ["Front End Enginer", "Father", "Husband", "LOTR Geek", "Rogue in WoW"],
+                strings: ["Front End Engineer", "Father", "Husband", "LOTR Geek", "Rogue in WoW"],
                 typeSpeed: 75,
                 backSpeed: 25,
                 loop: true
             })
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
