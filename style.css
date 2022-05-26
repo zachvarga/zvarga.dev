@@ -153,5 +153,5 @@ nav a:hover::after {
     color: #ed3f36;
 }
 .typed-cursor, .typed-cursor--blink {
-    opacity: .25;
+    opacity: .25 !important;
 }
