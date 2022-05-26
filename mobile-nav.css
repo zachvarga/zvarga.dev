@@ -28,7 +28,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: #e4563d;
+        background: #ed3f36;
         transform-origin: 0 0;
         transform: translateY(120%);
         transition: all .275s ease-in-out;
@@ -87,7 +87,7 @@
     .mod-nav a {
         display: block;
         padding: 10px 0;
-        color: #fff;
+        color: #fff !important;
         font-size: 5vw;
         text-decoration: none;
         font-weight: bold;
