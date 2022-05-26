@@ -10,7 +10,14 @@ article,aside,footer,header,nav,section {
     display:block;
 }
 section {
+    height: 100vh;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
 }
 body * {
     -webkit-box-sizing: border-box;
@@ -131,16 +138,6 @@ nav a:hover::after {
 	width: 100%;
 }
 /* Content */
-#section-home {
-    height: 100vh;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
-}
 .section-full {
     min-height: 100vh;
     padding: 9rem 3rem;
@@ -148,4 +145,7 @@ nav a:hover::after {
     -webkit-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
     transition: opacity 0.4s;
+}
+.hero {
+    
 }
