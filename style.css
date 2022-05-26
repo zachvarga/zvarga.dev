@@ -147,5 +147,11 @@ nav a:hover::after {
     transition: opacity 0.4s;
 }
 .hero {
-    
+
+}
+.hero-typed {
+    color: #ed3f36;
+}
+.typed-cursor {
+    opacity: .25;
 }
