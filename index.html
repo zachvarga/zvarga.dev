@@ -35,8 +35,8 @@
             </nav>
         </menu>
         <section id="home" class="section-full">
-            <div class="hero">
-                <h1>Hey, I'm Zach Varga<br>Front End Engineer</h1>
+            <div class="hero" id="hero">
+                
             </div>
         </section>
         <section id="work" class="section-full">
@@ -60,6 +60,18 @@
                 <p></p>
             </div>
         </section>
-        <script src="type-animation.js" async defer></script>
+        <script>
+            var i = 0;
+            var txt = 'Hey, I&aposm Zach Varga —— Front End Engineer'; /* The text */
+            var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+            function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("hero").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+            }
+        </script>
     </body>
 </html>
