@@ -48,13 +48,14 @@ a {
 
 /* Typography */
 h1 {
-    font-size: 3rem;
+    font-size: 3rem !important;
+    font-weight: bold !important;
 }
 
 /* Menu */
 .main-menu {
     width: 100%;
-    background-color: rgba(181,190,185,.25);
+    background-color: #edefee;
     height: 5rem;
     position: fixed;
     left: 0;
@@ -170,8 +171,20 @@ nav a:hover::after {
     -o-transition: opacity 0.4s;
     transition: opacity 0.4s;
 }
+#home {
+    background-image: url("assets/layered-peaks.png");
+}
 .hero {
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: start;
 }
 .hero-typed {
     color: #ed3f36;
@@ -179,12 +192,26 @@ nav a:hover::after {
 .typed-cursor, .typed-cursor--blink {
     opacity: .25 !important;
 }
+.hero p {
+    margin-top: 3em;
+}
 
+.btn-work {
+    border-radius: 6px;
+    border: none;
+    background-color: #b5beb9;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    margin-top: 2em;
+    align-items: end;
+    position: absolute;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 8vw !important;
+        font-size: 7vw !important;
     }
     body {
         padding: 0 !important;
@@ -211,7 +238,7 @@ nav a:hover::after {
     }
     .main-menu {
         width: 13rem;
-        background-color: rgba(181,190,185,.25); 
+        background-color: #edefee; 
         height: 100vh;
         position: fixed;
         left: 0;
