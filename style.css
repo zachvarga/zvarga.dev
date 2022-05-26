@@ -152,6 +152,6 @@ nav a:hover::after {
 .hero-typed {
     color: #ed3f36;
 }
-.typed-cursor.typed-cursor--blink {
+.typed-cursor, .typed-cursor--blink {
     opacity: .25;
 }
