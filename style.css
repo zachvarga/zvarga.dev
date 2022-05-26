@@ -173,6 +173,8 @@ nav a:hover::after {
 }
 #home {
     background-image: url("assets/layered-peaks.png");
+    background-repeat: none;
+    background-size: cover;
 }
 .hero {
     -webkit-box-orient: vertical;
