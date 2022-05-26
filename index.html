@@ -35,8 +35,8 @@
             </nav>
         </menu>
         <section id="home" class="section-full">
-            <div class="hero" id="hero">
-                
+            <div class="hero">
+                <h1>Hey, I'm Zach. I'm a <span class="hero-typed"></span></h1>
             </div>
         </section>
         <section id="work" class="section-full">
@@ -60,18 +60,15 @@
                 <p></p>
             </div>
         </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
-            var i = 0;
-            var txt = 'Hey, I&aposm Zach Varga —— Front End Engineer'; /* The text */
-            var speed = 50; /* The speed/duration of the effect in milliseconds */
-
-            function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("hero").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-            }
+            var typed = new Typed(".hero-typed", {
+                strings: ["Front End Enginer", "Father", "Husband", "LOTR Geek", "Rogue in WoW"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            })
         </script>
     </body>
 </html>
