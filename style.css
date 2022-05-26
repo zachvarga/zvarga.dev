@@ -39,11 +39,11 @@ body {
     overflow-x: hidden;
 }
 a {
-    color: #fd2155;
+    color: #fd2155 !important;
     -webkit-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* Typography */
@@ -209,11 +209,16 @@ nav a:hover::after {
     margin-top: 2em;
     align-items: end;
     position: absolute;
+    transition: all ease-in-out 300ms;
 }
 .btn-work:hover {
     border: 2px solid #ed3f36;
     color: #ed3f36;
     transition: all ease-in-out 300ms;
+}
+.btn:visited {
+    border: 2px solid #1d1d1d;
+    color: #1d1d1d; 
 }
 
 /* Media Queries */

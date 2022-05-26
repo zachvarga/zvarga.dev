@@ -31,7 +31,7 @@
         background: #e4563d;
         transform-origin: 0 0;
         transform: translateY(120%);
-        transition: all .275s .1s;
+        transition: all .275s ease-in-out;
     }
     
     .mod-nav.is-open::before {
