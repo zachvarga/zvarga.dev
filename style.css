@@ -185,6 +185,7 @@ nav a:hover::after {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: start;
+    margin-top: 2em;
 }
 .hero-typed {
     color: #ed3f36;
@@ -198,14 +199,19 @@ nav a:hover::after {
 
 .btn-work {
     border-radius: 6px;
-    border: none;
-    background-color: #b5beb9;
-    color: white;
+    border: 2px solid #1d1d1d;
+    background-color: transparent;
+    color: #1d1d1d;
     font-weight: bold;
     padding: 1rem 3rem;
     margin-top: 2em;
     align-items: end;
     position: absolute;
+}
+.btn-work:hover {
+    border: 2px solid #ed3f36;
+    color: #ed3f36;
+    transition: all ease-in-out 300ms;
 }
 
 /* Media Queries */
