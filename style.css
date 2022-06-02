@@ -173,8 +173,9 @@ nav a:hover::after {
 }
 #home {
     background-image: url("assets/layered-peaks.png");
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
+    min-height: 50vh;
 }
 .hero {
     -webkit-box-orient: vertical;
@@ -188,6 +189,7 @@ nav a:hover::after {
     -ms-flex-pack: center;
     justify-content: start;
     margin-top: 2em;
+    width: 100%;
 }
 .hero-typed {
     color: #ed3f36;
@@ -220,7 +222,14 @@ nav a:hover::after {
     border: 2px solid #1d1d1d;
     color: #1d1d1d; 
 }
-
+.section-full .container {
+    display: flex;
+    width: 100%;
+}
+/* fa styling */
+.fa-code {
+    
+}
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     h1 {
