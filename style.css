@@ -620,4 +620,13 @@ fieldset {
         padding: 3em;
         margin: 5em auto;
     }
+    .section-full {
+        padding: 2em;
+    }
+    #selfie {
+        margin-top: 10%;
+    }
+    .skills-list {
+        margin: 0;
+    }
 }
