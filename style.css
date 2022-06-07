@@ -476,7 +476,7 @@ fieldset {
 }
 .social-icons {
     text-align: left;
-    padding: 0;
+    padding: 0 0 2em 0;
     }
   .social-icons li {
     display:inline-block;
