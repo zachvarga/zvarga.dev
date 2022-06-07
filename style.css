@@ -375,7 +375,7 @@ figcaption h3 {
     background-image: url("assets/layered-peaks.png");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 /* fa styling */
 .fa-code {
