@@ -13,7 +13,6 @@ li {
     list-style: none;
 }
 section {
-    height: 100vh;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,17 +38,31 @@ body {
     overflow-x: hidden;
 }
 a {
-    color: #ed3f36 !important;
+    color: #ed3f36;
     -webkit-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s;
     text-decoration: none !important;
+    color: var(--bs-link-color);
 }
 
 /* Typography */
 h1 {
     font-size: 3rem !important;
     font-weight: bold !important;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1em !important;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h2 span {
+    color: #ed3f36;
+}
+p span {
+    color: #ed3f36 !important;
 }
 
 /* Menu */
@@ -170,6 +183,8 @@ nav a:hover::after {
     -webkit-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
     transition: opacity 0.4s;
+    flex-wrap: wrap;
+    width: 100%;
 }
 #home {
     background-image: url("assets/layered-peaks.png");
@@ -188,7 +203,7 @@ nav a:hover::after {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: start;
-    margin-top: 2em;
+    margin: 2em 0;
     width: 100%;
 }
 .hero-typed {
@@ -198,45 +213,302 @@ nav a:hover::after {
     opacity: .25 !important;
 }
 .hero p {
-    margin-top: 3em;
-}
 
-.btn-work {
+}
+.zvdbtn {
     border-radius: 6px;
     border: 2px solid #1d1d1d;
     background-color: transparent;
     color: #1d1d1d;
     font-weight: bold;
     padding: 1rem 3rem;
-    margin-top: 2em;
     align-items: end;
-    position: absolute;
-    transition: all ease-in-out 300ms;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 300ms; 
 }
-.btn-work:hover {
+.zvdbtn:visited {
+    border: 2px solid #1d1d1d;
+    color: #1d1d1d; 
+}
+.zvdbtn:hover {
+    border: 2px solid #ed3f36;
+    color: #ed3f36;
+    transition: all ease-in-out 300ms; 
+}
+.zvdbtn-work:hover {
     border: 2px solid #ed3f36;
     color: #ed3f36;
     transition: all ease-in-out 300ms;
 }
-.btn:visited {
+.zvdbtn-project {
     border: 2px solid #1d1d1d;
-    color: #1d1d1d; 
+    color: #1d1d1d;
+}
+.selfie {
+    max-width: 250px;
+    height: auto;
+    border-radius: 100%;
+    margin: 20% auto 0 auto;
+    display: flex;
 }
 .section-full .container {
     display: flex;
     width: 100%;
 }
+#skills {
+    background-image: url("assets/layered-peaks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 75vh;
+    height: auto;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills h2 {
+    width: 100%;
+    font-weight: bold;
+}
+.skills h3 {
+    padding: 2em;
+}
+.skills-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2em 0 0 0;
+}
+#work {
+    background-image: url("assets/layered-peaks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-item {
+    padding: .5em;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.work-item figure, .work-item .overlay {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.work-grid .work-item figure figcaption {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0rem 3rem;
+    color: #fff;
+    z-index: 1
+}
+figcaption {
+    z-index: 1;
+    align-content: space-around;
+    vertical-align: middle;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.work-item figcaption, .work-item .overlay {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    margin: .5em;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    -webkit-transition: .45s ease-in-out;
+    transition: .45s ease-in-out;
+}
+.overlay {
+    background-color: #edefee;
+    padding: 0.5em;
+}
+.work-item:hover figcaption,
+.work-item:hover .overlay {
+    opacity: 1;
+    -webkit-transition: .45s ease-in-out;
+    transition: .45s ease-in-out;
+}
+.work-grid .work-item img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+figcaption h3 {
+    font-size: 1em;
+}
+.outline {
+    border: 1px solid #edefee;
+    border-radius: 10px;
+}
+#about {
+    min-height: 50vh;
+    background-image: url("assets/layered-peaks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contact {
+    background-image: url("assets/layered-peaks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
 /* fa styling */
 .fa-code {
-    
+
+}
+/* Form Styling */
+#contact-form-forminput[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea,
+#contact-form button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact-form {
+    width: 100%;
+    background: white;
+    padding: 25px;
+    margin: 1em 0 5em 0;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 20%);
+    border-radius: 10px;
+}
+
+#contact-form h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact-form h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+  width: 100%;
+  border: 1px solid #edefee;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact-form input[type="text"]:hover,
+#contact-form input[type="email"]:hover,
+#contact-form input[type="tel"]:hover,
+#contact-form input[type="url"]:hover,
+#contact-form textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact-form textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact-form button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #ed3f36;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 1em;
+  font-size: 15px;
+}
+
+#contact-form button[type="submit"]:hover {
+  background: #1d1d1d;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact-form button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
 }
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 7vw !important;
+        margin-top: 0px !important;
     }
     body {
         padding: 0 !important;
+    }
+    .btn-work {
+        margin-top: 2em;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+    }
+    .work-item {
+        flex: none;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .work-item {
+        width: 50%;
+    }
+    .zvdbtn-work {
+        max-width: 250px;
+        margin-top: 2em;
     }
 }
 @media only screen and (max-width: 992px) {
@@ -255,6 +527,15 @@ nav a:hover::after {
     }
 }
 @media only screen and (min-width: 992px) {
+    a:hover {
+        color:#ed3f36 !important;
+    }
+    .skills {
+        margin-top: 20%;
+    }
+    .section-full {
+        padding: 0 3rem;
+    }
     .mod-nav, .open-mod-nav {
         display: none;
     }
@@ -326,5 +607,10 @@ nav a:hover::after {
     }
     nav a:hover::after {
         width: 100%;
+    }
+    #contact-form {
+        max-width: 75vh;
+        padding: 3em;
+        margin: 5em auto;
     }
 }

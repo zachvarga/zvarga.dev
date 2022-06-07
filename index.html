@@ -29,6 +29,7 @@
             </button>
             <nav class="mod-nav" id="mod-nav">
                 <ul class="hidden nav-items">
+                    <li><a href="#skills">abilities</a></li>
                     <li><a href="#work">work</a></li>
                     <li><a href="#about">about me</a></li>
                     <li><a href="#contact">contact</a></li>
@@ -36,6 +37,7 @@
             </nav>
             <nav class="full-nav" id="full_nav">
                 <ul class="hidden nav-items">
+                    <li><a href="#skills">abilities</a></li>
                     <li><a href="#work">work</a></li>
                     <li><a href="#about">about me</a></li>
                     <li><a href="#contact">contact</a></li>
@@ -45,35 +47,113 @@
         <section id="home" class="section-full">
             <div class="hero">
                 <h1>Hey, I'm Zach.<br>I'm a <span class="hero-typed"></span></h1>
-                <p>But most of all, I'm someone who focuses on creating detailed, intuitive, and effective digital solutions. </p>
-                <a href="#work"><button class="btn-work">See My Work</button></a>
+                <p>But most of all, I'm someone who focuses on creating detailed, intuitive, and effective digital solutions.</p>
+                <a href="#work" class="zvdbtn zvdbtn-work">See My Work</a>
+                <img class="selfie" src="assets/selfie.jpg" alt="selfie">
             </div>
-            <div class="intro">
-                <div class="container">
-                    <i class="fa-light fa-code"></i>
-                </div>
+        </section>
+        <section id="skills" class="section-full">
+            <div class="skills">
+                <h2>I'm <span>multilingual</span>. Here are the languages I speak:</h2>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Sass</li>
+                    <li>Liquid</li>
+                    <li>Python</li>
+                    <li>React</li>
+                    <li>Angular</li>
+                    <li>Bootstrap</li>
+                    <li>JQuery</li>
+                    <li>Ansible</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Git</li>
+                    <li>WordPress</li>
+                    <li>Shopify</li>
+                    <li>Agile/Scrum</li>
+                </ul>
+                <h3>I've worked as a designer and front end engineer, I feel at home in a text editor or CLI, and I'm not shy to learn new skills.</h3>
             </div>
         </section>
         <section id="work" class="section-full">
-            <div class="work-content">
-                <h2>My Recent Work</h2>
-                <p></p>
-                <div class="work-grid">
-
+            <h2>My Recent Work</h2>
+            <p></p>
+            <div class="work-grid">
+                <div class="work-item">
+                    <figure class="img">
+                        <img class="project-thumbnail outline" src="assets/fmb.jpg" alt="Fix My Blinds">
+                    </figure>
+                    <figcaption>
+                        <h3>Front End Architecture, ecommerce migration to Shopify, custom features, and more.</h3>
+                        <a class="zvdbtn zvdbtn-project" href="https://fixmyblinds.com">Visit Fix My Blinds</a>
+                    </figcaption>
+                    <div class="overlay"></div>
                 </div>
-            </div>
+                <div class="work-item">
+                    <figure class="img">
+                        <img class="project-thumbnail" src="assets/rev-mission.jpg" alt="Reviving Mission">
+                    </figure>
+                    <figcaption>
+                        <h3>Front End Architecture, ecommerce migration to Shopify, custom features, and more.</h3>
+                        <a class="zvdbtn zvdbtn-project" href="https://revivingmission.com">Visit Reviving Mission</a>
+                    </figcaption>
+                    <div class="overlay"></div>
+                </div>
+                <div class="work-item">
+                    <figure class="img">
+                        <img class="project-thumbnail outline" src="assets/ehc-store.jpg" alt="EHC Store">
+                    </figure>
+                    <figcaption>
+                        <h3>Front End Architecture, ecommerce migration to Shopify, custom features, and more.</h3>
+                        <a class="zvdbtn zvdbtn-project" href="https://shop.everyhome.org">Visit the Store</a>
+                    </figcaption>
+                    <div class="overlay"></div>
+                </div>
+                <div class="work-item">
+                    <figure class="img">
+                        <img class="project-thumbnail" src="assets/cmw.jpg" alt="Colorado Machine Works">
+                    </figure>
+                    <figcaption>
+                        <h3>Front End Architecture, ecommerce migration to Shopify, custom features, and more.</h3>
+                        <a class="zvdbtn zvdbtn-project" href="https://coloradomachineworks.com">Visit CMW</a>
+                    </figcaption>
+                    <div class="overlay"></div>
+                </div>
+            </div> 
         </section>
         <section id="about" class="section-full">
             <div class="about-content">
-                <h2 class=""></h2>
-                <p></p>
+                <h2 class="">About Me</h2>
+                <p> About 7 years ago, I learned how to code on my own. There was a need at my job at the time, so I felt a spark inside of me to fill that need —— and I haven't stopped coding since.<br>I am a learner by nature; hungry and curious to know more and attain a deep understaning of things. I'm a jack of all trades; one thing never seems to do it for me, and I enjoy having a proficiency in a myriad of abilities. I'm passionate about teamwork, clarity, communication, and automation; work smarter, not harder.</p>
             </div>
         </section>
         <section id="contact" class="section-full">
             <div class="contact-content">
-                <h2 class=""></h2>
-                <p></p>
+                <h2 class="">Contact Me</h2>
+                <p>I'd love the opportunity work with you. I'm always down to meet to talk about work, Jesus, Azeroth, life, Middle Earth, or anything else. Coffee's on me.<br><br>Drop me a line: <a href="mailto:hello@zvarga.dev" style="color: #ed3f36;">hello@zvarga.dev</a></p>
             </div>
+            <form id="contact-form" action="mailto:hello@zvarga.dev" method="post">
+                <fieldset>
+                  <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="Your Website (optional)" type="url" tabindex="4" required>
+                </fieldset>
+                <fieldset>
+                  <textarea placeholder="Type your message here..." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+              </form>
         </section>
         
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
