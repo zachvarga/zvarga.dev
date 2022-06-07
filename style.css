@@ -474,6 +474,23 @@ fieldset {
   outline: 0;
   border: 1px solid #aaa;
 }
+.social-icons {
+    text-align: left;
+    padding: 0;
+    }
+  .social-icons li {
+    display:inline-block;
+    list-style-type:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    }
+  .social-icons li a {
+    border-bottom: none;
+    }
+  .social-icons li img {
+    width:30px;
+    margin-right: 20px;
+  }
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     h1 {
